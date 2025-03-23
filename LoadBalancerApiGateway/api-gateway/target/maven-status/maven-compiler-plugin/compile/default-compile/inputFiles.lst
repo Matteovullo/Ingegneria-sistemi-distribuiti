@@ -1,0 +1,5 @@
+/Users/matteovullo/Desktop/Uni/Ingegneria/LoadBalancerApiGateway/api-gateway/src/main/java/com/microservice/apigateway/ApiGatewayApplication.java
+/Users/matteovullo/Desktop/Uni/Ingegneria/LoadBalancerApiGateway/api-gateway/src/main/java/com/microservice/apigateway/ZuulLoggingFilter.java
+/Users/matteovullo/Desktop/Uni/Ingegneria/LoadBalancerApiGateway/api-gateway/src/main/java/com/microservice/apigateway/controller/LogViewerController.java
+/Users/matteovullo/Desktop/Uni/Ingegneria/LoadBalancerApiGateway/api-gateway/src/main/java/com/microservice/apigateway/AdvancedLoggingAspect.java
+/Users/matteovullo/Desktop/Uni/Ingegneria/LoadBalancerApiGateway/api-gateway/src/main/java/com/microservice/apigateway/SubsequenceAnalyzer.java

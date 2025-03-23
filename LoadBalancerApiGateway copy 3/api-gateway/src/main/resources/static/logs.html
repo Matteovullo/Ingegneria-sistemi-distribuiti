@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Viewer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { text-align: center; margin-top: 50px; }
+        .hidden { display: none; }
+        pre { white-space: pre-wrap; word-wrap: break-word; background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; text-align: left; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="welcome-screen" class="container">
+        <h1>Benvenuto nel Visualizzatore di Log</h1>
+        <button onclick="showLogs()">Visualizza Log</button>
+    </div>
+    <div id="log-screen" class="container hidden">
+        <h1>Log Viewer</h1>
+        <button onclick="loadLogs()">Carica Log</button>
+        <pre id="logs"></pre>
+    </div>
+    <script>
+        function showLogs() {
+            document.getElementById('welcome-screen').classList.add('hidden');
+            document.getElementById('log-screen').classList.remove('hidden');
+        }
+
+        function loadLogs() {
+            fetch('/logs')
+                .then(response => response.text())
+                .then(data => document.getElementById('logs').textContent = data)
+                .catch(error => console.error('Errore durante il caricamento dei log:', error));
+        }
+    </script>
+</body>
+</html>

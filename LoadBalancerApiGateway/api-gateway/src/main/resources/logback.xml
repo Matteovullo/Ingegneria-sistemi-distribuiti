@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Appender per i log nella console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Configurazione del formato dei log nella console -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Appender per i log nel file -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- Percorso del file di log -->
+        <file>/Users/matteovullo/Desktop/Uni/Ingegneria/LoadBalancerApiGateway/api-gateway/api-gateway/logs/application.log</file>
+        <encoder>
+            <!-- Configurazione del formato dei log nel file -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Impostazione del livello di log e appender di destinazione -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
